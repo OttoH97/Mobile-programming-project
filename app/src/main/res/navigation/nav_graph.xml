@@ -32,7 +32,14 @@
         android:id="@+id/paaikkuna"
         android:name="com.example.mobiiliohjelmointiprojekti.Paaikkuna"
         android:label="fragment_paaikkuna"
-        tools:layout="@layout/fragment_paaikkuna" />
+        tools:layout="@layout/fragment_paaikkuna" >
+        <action
+            android:id="@+id/action_paa_to_arvostelu"
+            app:destination="@id/arvosteluikkuna" />
+        <action
+            android:id="@+id/action_paa_to_omatTiedot"
+            app:destination="@id/omatTiedotIkkuna" />
+    </fragment>
     <fragment
         android:id="@+id/arvosteluikkuna"
         android:name="com.example.mobiiliohjelmointiprojekti.Arvosteluikkuna"
