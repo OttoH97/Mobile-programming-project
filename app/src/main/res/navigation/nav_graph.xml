@@ -44,10 +44,23 @@
         android:id="@+id/arvosteluikkuna"
         android:name="com.example.mobiiliohjelmointiprojekti.Arvosteluikkuna"
         android:label="fragment_arvosteluikkuna"
-        tools:layout="@layout/fragment_arvosteluikkuna" />
+        tools:layout="@layout/fragment_arvosteluikkuna" >
+        <action
+            android:id="@+id/action_arvosteluikkuna_to_lisaaArvostelu"
+            app:destination="@id/lisaaArvostelu" />
+    </fragment>
     <fragment
         android:id="@+id/omatTiedotIkkuna"
         android:name="com.example.mobiiliohjelmointiprojekti.OmatTiedotIkkuna"
         android:label="fragment_omat_tiedot_ikkuna"
         tools:layout="@layout/fragment_omat_tiedot_ikkuna" />
+    <fragment
+        android:id="@+id/lisaaArvostelu"
+        android:name="com.example.mobiiliohjelmointiprojekti.LisaaArvostelu"
+        android:label="fragment_lisaa_arvostelu"
+        tools:layout="@layout/fragment_lisaa_arvostelu" >
+        <action
+            android:id="@+id/action_lisaaArvostelu_to_arvosteluikkuna"
+            app:destination="@id/arvosteluikkuna" />
+    </fragment>
 </navigation>

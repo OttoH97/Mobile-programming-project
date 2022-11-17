@@ -7,7 +7,8 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Arvostelu(
-@PrimaryKey val arvosteluid: Int,
+@PrimaryKey(autoGenerate = true) val arvosteluid: Int,
+val otsikko : String,
  val teksti : String,
  val arvosana : Int
 )
@@ -26,12 +27,12 @@ data class Arvostelu(
  )]
 )
 data class Elokuva(
- @PrimaryKey val elokuvaid: Int,
+ @PrimaryKey(autoGenerate = true) val elokuvaid: Int,
  val nimi : String,
 )
 @Entity
 data class Kayttaja(
- @PrimaryKey val kayttajaid : Int,
+ @PrimaryKey(autoGenerate = true) val kayttajaid : Int,
  val tunnus : String,
  val salasana : String
 )

@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+
+
 }
 
 android {
@@ -42,5 +44,8 @@ implementation 'androidx.navigation:navigation-runtime-ktx:2.5.3'
     implementation 'androidx.room:room-compiler:2.4.3'
     implementation 'androidx.room:room-common:2.4.3'
     implementation 'androidx.room:room-ktx:2.4.3'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.navigation:navigation-fragment:2.5.3'
 
 }
