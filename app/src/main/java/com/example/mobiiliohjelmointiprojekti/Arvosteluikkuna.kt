@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.Navigation
 
 class Arvosteluikkuna : Fragment() {
 
@@ -15,6 +17,12 @@ class Arvosteluikkuna : Fragment() {
         val view = inflater.inflate(R.layout.fragment_arvosteluikkuna, container, false)
 
         //Koodia
+
+        val btnlisaaArvostelu = view.findViewById<Button>(R.id.btnToLisaaArvostelu)
+
+        btnlisaaArvostelu.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_arvosteluikkuna_to_lisaaArvostelu)
+        }
 
         return view
     }

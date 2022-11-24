@@ -16,6 +16,6 @@ interface RegisterDao {
     fun getAllUsers(): LiveData<List<Kayttaja>>
 
     @Query("SELECT * FROM kayttaja WHERE user_name LIKE :tunnus ")
-    suspend fun getUsername(tunnus: String): Kayttaja?
+    suspend fun getUserName(tunnus: String): Kayttaja?
 
 }
