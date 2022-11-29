@@ -6,11 +6,6 @@
     app:startDestination="@id/paaikkuna">
 
     <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.example.mobiiliohjelmointiprojekti.ui.login.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
-    <fragment
         android:id="@+id/paaikkuna"
         android:name="com.example.mobiiliohjelmointiprojekti.Paaikkuna"
         android:label="fragment_paaikkuna"
@@ -21,6 +16,9 @@
         <action
             android:id="@+id/action_paa_to_omatTiedot"
             app:destination="@id/omatTiedotIkkuna" />
+        <action
+            android:id="@+id/action_paa_to_login"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/arvosteluikkuna"
@@ -41,4 +39,18 @@
         android:name="com.example.mobiiliohjelmointiprojekti.LisaaArvostelu"
         android:label="fragment_lisaa_arvostelu"
         tools:layout="@layout/fragment_lisaa_arvostelu" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.mobiiliohjelmointiprojekti.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.mobiiliohjelmointiprojekti.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
 </navigation>

@@ -21,7 +21,8 @@ class Paaikkuna : Fragment() {
         val btnArvostelut = view.findViewById<Button>(R.id.btnArvostelut)
 
         btnOmatSivut.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_paa_to_omatTiedot)
+            //Navigation.findNavController(view).navigate(R.id.action_paa_to_omatTiedot)
+            Navigation.findNavController(view).navigate(R.id.action_paa_to_login)
         }
 
         btnArvostelut.setOnClickListener {
