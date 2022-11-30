@@ -18,9 +18,9 @@ class Arvosteluikkuna : Fragment() {
 
         //Koodia
 
-        val btnlisaaArvostelu = view.findViewById<Button>(R.id.btnToLisaaArvostelu)
+        val btnTolisaaArvostelu = view.findViewById<Button>(R.id.btnToLisaaArvostelu)
 
-        btnlisaaArvostelu.setOnClickListener {
+        btnTolisaaArvostelu.setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_arvosteluikkuna_to_lisaaArvostelu)
         }
 

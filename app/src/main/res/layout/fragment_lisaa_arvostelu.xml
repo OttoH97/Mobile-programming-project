@@ -7,6 +7,7 @@
     tools:context=".LisaaArvostelu">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -14,26 +15,27 @@
             android:id="@+id/headerLisaaArvostelu"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
+            android:layout_marginTop="24dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Elokuva"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/multilineLisaaArvostelu"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.023" />
-
-        <TextView
-            android:id="@+id/textViewLisaaArvostelu"
-            android:layout_width="352dp"
-            android:layout_height="415dp"
-            android:text="TextView"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <EditText
+            android:id="@+id/multilineLisaaArvostelu"
+            android:layout_width="249dp"
+            android:layout_height="349dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            app:layout_constraintBottom_toTopOf="@+id/arvosanaLisaaArvostelu"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/headerLisaaArvostelu"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/headerLisaaArvostelu" />
 
         <EditText
             android:id="@+id/arvosanaLisaaArvostelu"
@@ -41,23 +43,24 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/btnArvosteluToDataBase"
+            app:layout_constraintTop_toBottomOf="@id/multilineLisaaArvostelu"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewLisaaArvostelu"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/btnToLisaaArvostelu"
+            android:id="@+id/btnArvosteluToDataBase"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
             android:text="Lisää arvostelu"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/arvosanaLisaaArvostelu"
-            app:layout_constraintVertical_bias="0.318" />
+            app:layout_constraintTop_toBottomOf="@+id/arvosanaLisaaArvostelu" />
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
