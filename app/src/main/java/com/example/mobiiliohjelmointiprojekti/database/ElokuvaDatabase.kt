@@ -6,7 +6,6 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 @Database(entities = [Arvostelu::class],version = 1, exportSchema = false)
 abstract class ElokuvaDatabase : RoomDatabase() {
-    abstract val registerDao: RegisterDao
     abstract fun arvosteluDao() : ArvosteluDao
 
     companion object {
@@ -23,7 +22,7 @@ abstract class ElokuvaDatabase : RoomDatabase() {
                     instance = Room.databaseBuilder(
                         context.applicationContext,
                         ElokuvaDatabase::class.java,
-                        "elokuvaDatabase"
+                        "elokuva_database"
                     )
                         .fallbackToDestructiveMigration()
                         .build()
