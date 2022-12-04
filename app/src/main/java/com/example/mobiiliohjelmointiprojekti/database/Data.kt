@@ -1,16 +1,19 @@
 package com.example.mobiiliohjelmointiprojekti.database
+import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 @Entity
 data class Arvostelu(
     @PrimaryKey(autoGenerate = true) val arvosteluid: Int,
     val otsikko : String,
     val teksti : String,
     val arvosana : Int
-)
+) : Parcelable
 @Entity(
     foreignKeys = [ForeignKey(
         entity = Arvostelu::class,

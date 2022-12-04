@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 
 class ArvosteluViewModel(application: Application): AndroidViewModel(application){
 
-    private val arvostelut : LiveData<List<Arvostelu>>
+    val arvostelut : LiveData<List<Arvostelu>>
     private val repository : ArvosteluRepository
 
     init{

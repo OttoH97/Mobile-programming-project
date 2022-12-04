@@ -28,6 +28,12 @@
         <action
             android:id="@+id/action_arvosteluikkuna_to_lisaaArvostelu"
             app:destination="@id/lisaaArvostelu" />
+        <action
+            android:id="@+id/action_arvosteluikkuna_to_katsoArvostelua"
+            app:destination="@id/katsoArvostelua" />
+        <argument
+            android:name="currentArvostelu"
+            app:argType="com.example.mobiiliohjelmointiprojekti.database.Arvostelu" />
     </fragment>
     <fragment
         android:id="@+id/omatTiedotIkkuna"
@@ -57,4 +63,16 @@
         android:name="com.example.mobiiliohjelmointiprojekti.register.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/katsoArvostelua"
+        android:name="com.example.mobiiliohjelmointiprojekti.KatsoArvostelua"
+        android:label="fragment_katso_arvostelua"
+        tools:layout="@layout/fragment_katso_arvostelua" >
+        <action
+            android:id="@+id/action_katsoArvostelua_to_arvosteluikkuna"
+            app:destination="@id/arvosteluikkuna" />
+        <argument
+            android:name="currentArvostelu"
+            app:argType="com.example.mobiiliohjelmointiprojekti.database.Arvostelu" />
+    </fragment>
 </navigation>
