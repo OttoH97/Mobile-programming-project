@@ -1,4 +1,6 @@
 package com.example.mobiiliohjelmointiprojekti
+import android.app.Activity
+import android.content.Context
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextUtils
@@ -6,7 +8,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.core.content.ContextCompat.getSystemService
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.mobiiliohjelmointiprojekti.R.id.*
@@ -32,6 +36,7 @@ class LisaaArvostelu : Fragment() {
 
         view.btnArvosteluToDataBase.setOnClickListener{
             insertToDatabase()
+
         }
 
 
@@ -57,4 +62,11 @@ class LisaaArvostelu : Fragment() {
     private fun inputCheck(otsikko: String, teksti : String, arvosana : Editable): Boolean{
         return !(TextUtils.isEmpty(otsikko) && TextUtils.isEmpty(teksti) && arvosana.isEmpty())
     }
+
+   /* private fun hideKeyboard(view: View){
+        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(view.windowToken,0)
+    }*/
+
+
 }

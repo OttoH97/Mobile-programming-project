@@ -24,9 +24,9 @@ private val args by navArgs<ArvosteluikkunaArgs>()
         view.katsoArvosteluTeksti.setText(args.currentArvostelu.teksti)
         view.katsoArvosteluNumero.text = args.currentArvostelu.arvosana.toString()
 
-        /*view.btnToArvosteluIkkuna.setOnClickListener{
+        view.btnToArvosteluIkkuna.setOnClickListener{
             Navigation.findNavController(view).navigate(R.id.action_katsoArvostelua_to_arvosteluikkuna)
-        }*/
+        }
 
         return view
     }
