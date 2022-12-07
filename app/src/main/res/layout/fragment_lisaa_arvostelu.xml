@@ -9,7 +9,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
 
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+
+        >
 
         <EditText
             android:id="@+id/headerLisaaArvostelu"
@@ -18,7 +20,7 @@
             android:layout_marginTop="24dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Elokuva"
+            android:hint="Otsikko"
             app:layout_constraintBottom_toTopOf="@id/multilineLisaaArvostelu"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
@@ -31,6 +33,7 @@
             android:layout_height="349dp"
             android:ems="10"
             android:gravity="start|top"
+            android:hint = "Arvostelu"
             android:inputType="textMultiLine"
             app:layout_constraintBottom_toTopOf="@+id/arvosanaLisaaArvostelu"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,6 +46,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number"
+            android:hint="Arvosteluasteikko 0-5"
+            android:digits="1,2,3,4,5"
             app:layout_constraintBottom_toBottomOf="@id/btnArvosteluToDataBase"
             app:layout_constraintTop_toBottomOf="@id/multilineLisaaArvostelu"
             app:layout_constraintEnd_toEndOf="parent"

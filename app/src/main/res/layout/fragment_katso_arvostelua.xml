@@ -6,30 +6,45 @@
     android:layout_height="match_parent"
     tools:context=".KatsoArvostelua">
 
-    
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
 
         <TextView
             android:id="@+id/katsoArvosteluHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="TextView"
+            android:text="Otsikko"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/katsoArvosteluTeksti"/>
 
 
-        <EditText
+        <TextView
             android:id="@+id/katsoArvosteluTeksti"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
+            android:textSize="20sp"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toTopOf="@+id/katsoArvosteluNumero"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,11 +54,13 @@
             android:id="@+id/katsoArvosteluNumero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            app:layout_constraintTop_toBottomOf="@id/katsoArvosteluTeksti"
+            android:text="0-5"
+            android:textSize="23sp"
             app:layout_constraintBottom_toTopOf="@+id/btnToArvosteluIkkuna"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/katsoArvosteluTeksti" />
+
 
         <Button
             android:id="@+id/btnToArvosteluIkkuna"
@@ -55,6 +72,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/katsoArvosteluNumero"/>
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

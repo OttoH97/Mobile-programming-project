@@ -12,7 +12,7 @@ interface ArvosteluDao {
     @Insert
     suspend fun insert(arvostelu: Arvostelu)
 
-    @Query("SELECT * FROM Arvostelu ORDER BY arvosteluid DESC")
+    @Query("SELECT * FROM Arvostelu ORDER BY arvosteluid")
     fun getAllReviews(): LiveData<List<Arvostelu>>
 
     @Query("SELECT * FROM Arvostelu WHERE arvosteluid = arvosteluid")
