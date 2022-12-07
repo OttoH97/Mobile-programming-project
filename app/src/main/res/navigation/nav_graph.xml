@@ -62,7 +62,11 @@
         android:id="@+id/registerFragment"
         android:name="com.example.mobiiliohjelmointiprojekti.register.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" />
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_register_to_omatTiedot"
+            app:destination="@id/omatTiedotIkkuna" />
+    </fragment>
     <fragment
         android:id="@+id/katsoArvostelua"
         android:name="com.example.mobiiliohjelmointiprojekti.KatsoArvostelua"

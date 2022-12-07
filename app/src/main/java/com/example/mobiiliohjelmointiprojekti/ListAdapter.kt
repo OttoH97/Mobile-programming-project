@@ -44,7 +44,7 @@ class ListAdapter:RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         //holder.itemView.arvostelunumero.text = currentItem.arvosana.toString()
 
         holder.itemView.rowLayout.setOnClickListener{
-        val action = ArvosteluikkunaDirections.actionArvosteluikkunaToKatsoArvostelua(currentItem)
+            val action = ArvosteluikkunaDirections.actionArvosteluikkunaToKatsoArvostelua(currentItem)
             holder.itemView.findNavController().navigate(action)
         }
 

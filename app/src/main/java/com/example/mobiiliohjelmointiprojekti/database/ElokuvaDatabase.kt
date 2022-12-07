@@ -4,9 +4,10 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-@Database(entities = [Arvostelu::class],version = 1, exportSchema = false)
+@Database(entities = [Arvostelu::class, Kayttaja::class],version = 2, exportSchema = false)
 abstract class ElokuvaDatabase : RoomDatabase() {
     abstract fun arvosteluDao() : ArvosteluDao
+    abstract fun kayttajaDao() : RegisterDao
 
     companion object {
 
