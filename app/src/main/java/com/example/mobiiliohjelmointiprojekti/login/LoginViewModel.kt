@@ -26,10 +26,12 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
         kayttaja = repository.kayttajat
     }
 
-    fun addKayttaja(kayttaja: Kayttaja) {
+    fun checkKayttaja(tunnus: String) {
         viewModelScope.launch(Dispatchers.IO){
-            repository.insert(kayttaja)
+            repository.getUserName(tunnus)
         }
     }
+
+
 
 }
