@@ -15,7 +15,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
-import com.example.mobiiliohjelmointiprojekti.MyStorage
 import com.example.mobiiliohjelmointiprojekti.R
 import com.example.mobiiliohjelmointiprojekti.database.Kayttaja
 import kotlinx.android.synthetic.main.fragment_login.*
@@ -25,7 +24,6 @@ class LoginFragment : Fragment() {
 
     private lateinit var viewModel: LoginViewModel
     private var kayttajaList = emptyList<Kayttaja>()
-    lateinit var myStorage: MyStorage
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -59,13 +57,9 @@ class LoginFragment : Fragment() {
         val tunnus = editTextUsername.text.toString()
         val salasana = editTextPasswordL.text.toString()
         d("oeh", "${kayttajaList}")
-        myStorage = MyStorage()
         if (inputCheck(tunnus, salasana)) {
             kayttajaList.forEach {
                 if (it.tunnus == tunnus && it.salasana == salasana) {
-                    myStorage.setStoredString(tunnus)
-//                    d("oeh","${viewModel.checkLogin(1)}")
-                    d("oeh", myStorage.stored)
                     Toast.makeText(requireContext(), "Käyttäjä löytyi", Toast.LENGTH_LONG).show()
                     findNavController().navigate(R.id.action_login_to_omatTiedot)
                 } else {
