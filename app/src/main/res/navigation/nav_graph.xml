@@ -34,12 +34,19 @@
         <argument
             android:name="currentArvostelu"
             app:argType="com.example.mobiiliohjelmointiprojekti.database.Arvostelu" />
+        <action
+            android:id="@+id/action_arvosteluikkuna_to_paaikkuna"
+            app:destination="@id/paaikkuna" />
     </fragment>
     <fragment
         android:id="@+id/omatTiedotIkkuna"
         android:name="com.example.mobiiliohjelmointiprojekti.OmatTiedotIkkuna"
         android:label="fragment_omat_tiedot_ikkuna"
-        tools:layout="@layout/fragment_omat_tiedot_ikkuna" />
+        tools:layout="@layout/fragment_omat_tiedot_ikkuna" >
+        <action
+            android:id="@+id/action_omatTiedotIkkuna_to_paaikkuna"
+            app:destination="@id/paaikkuna" />
+    </fragment>
     <fragment
         android:id="@+id/lisaaArvostelu"
         android:name="com.example.mobiiliohjelmointiprojekti.LisaaArvostelu"
@@ -79,4 +86,9 @@
             android:name="currentArvostelu"
             app:argType="com.example.mobiiliohjelmointiprojekti.database.Arvostelu" />
     </fragment>
+    <action
+        android:id="@+id/action_global_paaikkuna3"
+        app:destination="@id/paaikkuna"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="true" />
 </navigation>

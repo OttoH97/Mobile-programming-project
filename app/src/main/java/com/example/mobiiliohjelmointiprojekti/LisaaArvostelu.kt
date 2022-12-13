@@ -6,6 +6,7 @@ import android.text.Editable
 import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
@@ -36,9 +37,7 @@ class LisaaArvostelu : Fragment() {
 
         view.btnArvosteluToDataBase.setOnClickListener{
             insertToDatabase()
-
         }
-
 
     return view
     }
