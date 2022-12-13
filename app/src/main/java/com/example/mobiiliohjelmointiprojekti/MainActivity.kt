@@ -7,12 +7,14 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_lisaa_arvostelu.*
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -21,13 +23,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when(item.itemId) {
+        return when (item.itemId) {
             R.id.home -> {
                 d("oeh", "You clicked Home")
-                Navigation.findNavController(fragmentContainerView).navigate(R.id.action_global_paaikkuna3)
+                Navigation.findNavController(fragmentContainerView)
+                    .navigate(R.id.action_global_paaikkuna3)
                 return true
-            } else -> super.onOptionsItemSelected(item)
+            }
+            else -> super.onOptionsItemSelected(item)
         }
     }
+
+
 
 }
