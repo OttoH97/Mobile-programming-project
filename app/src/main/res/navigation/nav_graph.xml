@@ -46,6 +46,9 @@
         <action
             android:id="@+id/action_omatTiedotIkkuna_to_paaikkuna"
             app:destination="@id/paaikkuna" />
+        <action
+            android:id="@+id/action_omatTiedot_to_paa"
+            app:destination="@id/paaikkuna" />
     </fragment>
     <fragment
         android:id="@+id/lisaaArvostelu"
@@ -64,6 +67,9 @@
         <action
             android:id="@+id/action_login_to_register"
             app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_login_to_omatTiedot"
+            app:destination="@id/omatTiedotIkkuna" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"

@@ -37,5 +37,6 @@ data class Kayttaja(
     @PrimaryKey(autoGenerate = true) val kayttajaid : Int,
     @ColumnInfo(name = "user_name")
     val tunnus : String,
-    val salasana : String
+    val salasana : String/*,
+    val loggedIn : Boolean*/
 )

@@ -9,4 +9,7 @@ class KayttajaRepository(private val dao: RegisterDao){
     suspend fun getUserName(tunnus:String):Kayttaja?{
         return dao.getUserName(tunnus)
     }
+//    suspend fun checkLogin(loggedIn: Boolean):Kayttaja? {
+//        return dao.checkLogin(loggedIn)
+//    }
 }

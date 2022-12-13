@@ -18,4 +18,7 @@ interface RegisterDao {
     @Query("SELECT * FROM kayttaja WHERE user_name LIKE :tunnus ")
     suspend fun getUserName(tunnus: String): Kayttaja?
 
+//    @Query("SELECT * FROM kayttaja WHERE loggedIn == 1")
+//    suspend fun checkLogin(loggedIn: Boolean): Kayttaja?
+
 }

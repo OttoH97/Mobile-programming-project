@@ -32,6 +32,12 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
+//    fun checkLogin(loggedInt: Int) {
+//        viewModelScope.launch(Dispatchers.IO){
+//            repository.checkLogin(loggedInt)
+//        }
+//    }
+
 
 
 }

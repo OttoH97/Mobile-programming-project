@@ -36,7 +36,7 @@ class RegisterFragment : Fragment() {
     }
 
     private fun insertToDatabase(){
-        val tunnus = editTextTextPersonName3.text.toString()
+        val tunnus = editTextUsernameR.text.toString()
         val salasana = editTextPasswordR.text.toString()
 
         if (inputCheck(tunnus, salasana)){
@@ -50,7 +50,7 @@ class RegisterFragment : Fragment() {
     }
 
     private fun inputCheck(tunnus: String, salasana : String): Boolean{
-        return !(TextUtils.isEmpty(tunnus) && TextUtils.isEmpty(salasana))
+        return !(TextUtils.isEmpty(tunnus) || TextUtils.isEmpty(salasana))
     }
 
 }
