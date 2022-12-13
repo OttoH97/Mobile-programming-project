@@ -6,6 +6,7 @@ import android.text.Editable
 import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
@@ -36,9 +37,7 @@ class LisaaArvostelu : Fragment() {
 
         view.btnArvosteluToDataBase.setOnClickListener{
             insertToDatabase()
-
         }
-        //hideKeyboard(multilineLisaaArvostelu)
 
     return view
     }
@@ -63,10 +62,10 @@ class LisaaArvostelu : Fragment() {
         return !(TextUtils.isEmpty(otsikko) && TextUtils.isEmpty(teksti) && arvosana.isEmpty())
     }
 
-    private fun hideKeyboard(view: View){
-        val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+   /* private fun hideKeyboard(view: View){
+        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(view.windowToken,0)
-    }
+    }*/
 
 
 }
